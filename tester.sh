@@ -9,7 +9,11 @@ NOCOLOR='\033[0m'
 DIR_PATH=".."
 DIR_PROG="${DIR_PATH}/so_long"
 
-printf "${BLUE}\n\n\n#####		TEST MAPS		#####\n\n${NOCOLOR}"
+print_msg() {
+  echo -e "${BLUE}\n\n\n##### $1 #####\n\n\n\n${NOCOLOR}"
+}
+
+print_msg "TEST MAPS"
 i=1
 printf "${YELLOW}Test nº$i :	no arguments\n./so_long\n\n${NOCOLOR}"; ((i=i+1)); $DIR_PROG; sleep 1
 
